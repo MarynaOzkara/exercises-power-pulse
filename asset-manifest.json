@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/exercises-power-pulse/static/css/main.7acaea2f.css",
+    "main.js": "/exercises-power-pulse/static/js/main.9dbbf35a.js",
+    "index.html": "/exercises-power-pulse/index.html",
+    "main.7acaea2f.css.map": "/exercises-power-pulse/static/css/main.7acaea2f.css.map",
+    "main.9dbbf35a.js.map": "/exercises-power-pulse/static/js/main.9dbbf35a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.9dbbf35a.js"
+  ]
+}

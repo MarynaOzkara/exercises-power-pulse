@@ -1,13 +1,21 @@
 {
   "files": {
     "main.css": "/exercises-power-pulse/static/css/main.5676c91b.css",
-    "main.js": "/exercises-power-pulse/static/js/main.c04ae285.js",
+    "main.js": "/exercises-power-pulse/static/js/main.17ab5574.js",
+    "static/js/842.a61ec7cc.chunk.js": "/exercises-power-pulse/static/js/842.a61ec7cc.chunk.js",
+    "static/js/841.5082d318.chunk.js": "/exercises-power-pulse/static/js/841.5082d318.chunk.js",
+    "static/js/347.43ea0051.chunk.js": "/exercises-power-pulse/static/js/347.43ea0051.chunk.js",
+    "static/js/406.04c7d2da.chunk.js": "/exercises-power-pulse/static/js/406.04c7d2da.chunk.js",
     "index.html": "/exercises-power-pulse/index.html",
     "main.5676c91b.css.map": "/exercises-power-pulse/static/css/main.5676c91b.css.map",
-    "main.c04ae285.js.map": "/exercises-power-pulse/static/js/main.c04ae285.js.map"
+    "main.17ab5574.js.map": "/exercises-power-pulse/static/js/main.17ab5574.js.map",
+    "842.a61ec7cc.chunk.js.map": "/exercises-power-pulse/static/js/842.a61ec7cc.chunk.js.map",
+    "841.5082d318.chunk.js.map": "/exercises-power-pulse/static/js/841.5082d318.chunk.js.map",
+    "347.43ea0051.chunk.js.map": "/exercises-power-pulse/static/js/347.43ea0051.chunk.js.map",
+    "406.04c7d2da.chunk.js.map": "/exercises-power-pulse/static/js/406.04c7d2da.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5676c91b.css",
-    "static/js/main.c04ae285.js"
+    "static/js/main.17ab5574.js"
   ]
 }

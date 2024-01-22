@@ -1,9 +1,13 @@
 import { Routes, Route, Navigate } from 'react-router';
-import Exercises from 'pages/Exercises';
 import SheredLayout from './SheredLayout/SheredLayout';
-import Home from './Home/Home';
-import ExercisesCategories from './ExercisesCategories/ExercisesCategories';
-import ExercisesList from './ExercisesList/ExercisesList';
+import { lazy } from 'react';
+
+const Home = lazy(() => import('./Home/Home'));
+const Exercises = lazy(() => import('../pages/Exercises'));
+const ExercisesCategories = lazy(() =>
+  import('./ExercisesCategories/ExercisesCategories')
+);
+const ExercisesList = lazy(() => import('./ExercisesList/ExercisesList'));
 
 export const App = () => {
   return (

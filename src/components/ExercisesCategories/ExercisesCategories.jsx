@@ -18,8 +18,9 @@ import {
   CategoryTitle,
   Pagination,
 } from './ExercisesCategories.styled';
-import { catitalizeString } from '../../helpers/capitalizeString';
+import capitalizeString from '../../helpers/capitalizeString';
 import { getCategories } from '../../redux/exercises-api';
+import { useLocation } from 'react-router';
 
 const ExercisesCategories = () => {
   const dispatch = useDispatch();
@@ -27,21 +28,22 @@ const ExercisesCategories = () => {
   const subCategories = useSelector(selectListCategories);
   const page = useSelector(selectPageCategories);
   const total = useSelector(selectTotalCategories);
-  console.log(category);
-  console.log(page);
-  console.log(total);
+  const location = useLocation();
+  // console.log(category);
+  // console.log(page);
+  // console.log(total);
   return (
     <>
       <div>
         <SubCategoryList>
           {subCategories.map(({ _id, name, imgURL, filter }) => (
             <SubCategoryItem key={_id}>
-              <SubCategoryLink to={name}>
+              <SubCategoryLink to={name} state={{ from: location }}>
                 <SubCategoryWrap>
                   <SubCategoryImg src={imgURL} alt={name} />
                   <DescriptionWrap>
                     <SubCategoryTitle>
-                      {catitalizeString(name)}
+                      {capitalizeString(name)}
                     </SubCategoryTitle>
                     <CategoryTitle>{filter}</CategoryTitle>
                   </DescriptionWrap>

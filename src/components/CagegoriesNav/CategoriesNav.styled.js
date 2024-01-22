@@ -38,3 +38,7 @@ export const CategoriesWrap = styled.div`
   margin-top: 64px;
   /* border: 1px solid #fff; */
 `;
+export const GoBackBtnWrap = styled.div`
+  position: absolute;
+  top: 116px;
+`;

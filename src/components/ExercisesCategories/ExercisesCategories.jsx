@@ -1,8 +1,9 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import {
   selectCategory,
+  selectLimitCategories,
   selectListCategories,
   selectPageCategories,
   selectTotalCategories,
@@ -16,25 +17,27 @@ import {
   DescriptionWrap,
   SubCategoryTitle,
   CategoryTitle,
-  Pagination,
+  SubCategoriesWrap,
 } from './ExercisesCategories.styled';
 import capitalizeString from '../../helpers/capitalizeString';
-import { getCategories } from '../../redux/exercises-api';
 import { useLocation } from 'react-router';
+import Pagination from 'components/Pagination/Pagination';
 
 const ExercisesCategories = () => {
-  const dispatch = useDispatch();
   const category = useSelector(selectCategory);
   const subCategories = useSelector(selectListCategories);
   const page = useSelector(selectPageCategories);
   const total = useSelector(selectTotalCategories);
+  const limit = useSelector(selectLimitCategories);
   const location = useLocation();
+
   // console.log(category);
   // console.log(page);
   // console.log(total);
+  // console.log(limit);
   return (
     <>
-      <div>
+      <SubCategoriesWrap>
         <SubCategoryList>
           {subCategories.map(({ _id, name, imgURL, filter }) => (
             <SubCategoryItem key={_id}>
@@ -52,17 +55,15 @@ const ExercisesCategories = () => {
             </SubCategoryItem>
           ))}
         </SubCategoryList>
-      </div>
+      </SubCategoriesWrap>
+
       {total > 10 && (
-        <Pagination>
-          <button
-            onClick={() =>
-              dispatch(getCategories({ category: category, page: page }))
-            }
-          >
-            Load more
-          </button>
-        </Pagination>
+        <Pagination
+          page={page}
+          category={category}
+          limit={limit}
+          total={total}
+        />
       )}
     </>
   );

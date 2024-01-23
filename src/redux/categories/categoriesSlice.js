@@ -6,6 +6,7 @@ const categoriesSlice = createSlice({
   initialState: {
     category: 'bodyPart',
     items: [],
+    limit: 0,
     total: 0,
     page: 0,
     isLoading: false,
@@ -25,7 +26,8 @@ const categoriesSlice = createSlice({
       .addCase(getCategories.fulfilled, (state, { payload }) => {
         // console.log(typeof payload.page);
         state.items = payload.data;
-        state.page = payload.page + 1;
+        state.limit = payload.limit;
+        state.page = payload.page;
         state.total = payload.total;
         state.isLoading = false;
       })

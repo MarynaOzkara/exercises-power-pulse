@@ -6,6 +6,9 @@ export const ExercisesCategoriesWrap = styled.div`
   align-items: center;
   justify-content: space-between; */
 `;
+export const SubCategoriesWrap = styled.div`
+  margin: 0 auto;
+`;
 export const SubCategoryList = styled.ul`
   padding: 0;
   margin: 0;
@@ -13,6 +16,7 @@ export const SubCategoryList = styled.ul`
   flex-wrap: wrap;
   gap: 16px;
   list-style-type: none;
+  margin-top: 64px;
 `;
 export const SubCategoryItem = styled.li`
   width: calc((100% - 4 * 16px) / 5);
@@ -60,8 +64,4 @@ export const CategoryTitle = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 18px; /* 150% */
-`;
-export const Pagination = styled.div`
-  margin-top: 32px;
-  text-align: center;
 `;

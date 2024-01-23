@@ -35,8 +35,7 @@ export const NavPageWrap = styled.div`
   justify-content: space-between;
 `;
 export const CategoriesWrap = styled.div`
-  margin-top: 64px;
-  /* border: 1px solid #fff; */
+  margin: 0 auto;
 `;
 export const GoBackBtnWrap = styled.div`
   position: absolute;

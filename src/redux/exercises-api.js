@@ -1,5 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+// const URL = 'https://power-pulse-6-backend.onrender.com/api';
+const URL = 'http://localhost:3001/api';
 
 const getCategories = createAsyncThunk(
   'trainings/getCategories',
@@ -7,15 +9,12 @@ const getCategories = createAsyncThunk(
     console.log(category);
     console.log(page);
     try {
-      const { data } = await axios.get(
-        'http://localhost:3001/api/exercises/categories',
-        {
-          params: {
-            category: category,
-            page: page,
-          },
-        }
-      );
+      const { data } = await axios.get(`${URL}/exercises/categories`, {
+        params: {
+          category: category,
+          page: page,
+        },
+      });
       console.log(data);
       return data;
     } catch (e) {
@@ -32,7 +31,7 @@ const getExercises = createAsyncThunk(
     console.log(page);
     try {
       const { data } = await axios.get(
-        `http://localhost:3001/api/exercises?${category}=${subCategory}`,
+        `${URL}/exercises?${category}=${subCategory}`,
         {
           params: {
             page: page,

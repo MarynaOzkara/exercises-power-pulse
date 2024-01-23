@@ -47,4 +47,5 @@ export const MainContent = styled.div`
   margin: 0 auto;
   /* border: 1px solid #fff; */
   margin-top: 72px;
+  margin-bottom: 64px;
 `;

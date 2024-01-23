@@ -6,8 +6,18 @@ export const ExercisesListWrap = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  overflow: hidden;
+  margin-top: 32px;
+
   overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(239, 237, 232, 0.1);
+    border-radius: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ef8964;
+    border-radius: 12px;
+  }
 `;
 export const ExerciseItemWrap = styled.li`
   width: 405px;
@@ -84,6 +94,11 @@ export const FigureIcon = styled.svg`
 export const ExerciseTitle = styled.p`
   font-size: #efede8;
   font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
@@ -105,8 +120,14 @@ export const TargetsListItem = styled.li`
 
 export const TargetsListTitle = styled.p`
   color: rgba(239, 237, 232, 0.4);
+  white-space: nowrap;
 `;
 
 export const TargetsListText = styled.p`
   color: #efede8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 `;

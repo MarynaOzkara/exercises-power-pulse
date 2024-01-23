@@ -6,3 +6,4 @@ export const selectTotalCategories = state => state.categories.total;
 export const selectExercises = state => state.exercises.items;
 export const selectPageExercises = state => state.exercises.page;
 export const selectTotalExercises = state => state.exercises.total;
+export const selectLimitExercises = state => state.exercises.limit;

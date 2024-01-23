@@ -5,8 +5,9 @@ const exercisesSlice = createSlice({
   name: 'exercises',
   initialState: {
     items: [],
+    limit: 0,
     total: 0,
-    page: 0,
+    page: 1,
     isLoading: false,
     error: null,
   },
@@ -17,7 +18,8 @@ const exercisesSlice = createSlice({
       })
       .addCase(getExercises.fulfilled, (state, { payload }) => {
         // console.log(typeof payload.page);
-        state.items = payload.data;
+        state.items = [...state.items, ...payload.data];
+        state.limit = payload.limit;
         state.page = payload.page + 1;
         state.total = payload.total;
         state.isLoading = false;

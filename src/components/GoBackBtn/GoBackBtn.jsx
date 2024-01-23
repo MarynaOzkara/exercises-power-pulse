@@ -1,4 +1,6 @@
 import { useLocation, useNavigate } from 'react-router';
+import { BackBtn, ArrowIcon, TextBtn } from './GoBackBtn.styled';
+import icons from '../../assets/icons/icons.svg';
 
 const GoBackBtn = () => {
   const location = useLocation();
@@ -10,7 +12,12 @@ const GoBackBtn = () => {
   };
   return (
     <>
-      <button onClick={() => handleClickBackBtn()}>Go Back</button>
+      <BackBtn onClick={() => handleClickBackBtn()}>
+        <ArrowIcon>
+          <use href={`${icons}#icon-back-arrow`}></use>
+        </ArrowIcon>
+        <TextBtn>Back</TextBtn>
+      </BackBtn>
     </>
   );
 };
